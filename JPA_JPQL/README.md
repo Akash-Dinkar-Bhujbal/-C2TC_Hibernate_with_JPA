@@ -1,7 +1,7 @@
 # C2TC_Hibernate_with_JPA
 ## JPQL : Java Persistence Query Language
 
-Please run the below DDL query before you execute this application.
+Please run the below DDL, DML queries before you execute this application.
 
 CREATE TABLE books (id int(6) PRIMARY KEY, title varchar(100), author VARCHAR(50), price float(6,2));
 
