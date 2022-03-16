@@ -8,18 +8,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "address1") // Optional
+//@Table(name = "address") // Optional
 public class Address implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 //	addressId
 	@Id
-	@Column(name = "ADDRESS_ID")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "address_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int addressId;
 
 	public int getAddressId() {
@@ -31,7 +30,7 @@ public class Address implements Serializable {
 	}
 
 //	street
-	@Column(name = "ADDRESS_STREET")
+	@Column(name = "address_street")
 	private String street;
 
 	public String getStreet() {
@@ -43,7 +42,7 @@ public class Address implements Serializable {
 	}
 
 //	city
-	@Column(name = "ADDRESS_CITY")
+	@Column(name = "address_city")
 	private String city;
 
 	public String getCity() {
@@ -55,7 +54,7 @@ public class Address implements Serializable {
 	}
 
 //	state
-	@Column(name = "ADDRESS_STATE")
+	@Column(name = "address_state")
 	private String state;
 
 	public String getState() {
@@ -67,7 +66,7 @@ public class Address implements Serializable {
 	}
 
 //	zipCode
-	@Column(name = "ADDRESS_ZIPCODE")
+	@Column(name = "address_zipcode")
 	private String zipCode;
 
 	public String getZipCode() {
@@ -78,17 +77,5 @@ public class Address implements Serializable {
 		this.zipCode = zipCode;
 	}
 
-//	Student
-	// to create bi-directional relationship, use one to one with mappedBy
-	// mappedBy attribute indicates property name of owner i.e. Student class
-	@OneToOne(mappedBy = "address")
-	private Student student;
 
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
-	}
 }

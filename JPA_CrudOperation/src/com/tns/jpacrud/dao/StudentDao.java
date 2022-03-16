@@ -13,7 +13,8 @@ public interface StudentDao {
 
 	void updateStudent(Student student);
 
+	void beginTransaction();
+
 	void commitTransaction();
 
-	void beginTransaction();
 }

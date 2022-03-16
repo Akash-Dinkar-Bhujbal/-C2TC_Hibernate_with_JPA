@@ -2,23 +2,16 @@ package com.cg.jpastart.entities;
 
 import java.io.Serializable;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "student1")
+@Table(name = "student")
 public class Student implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 //	studentId
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int studentId;
 
 	public int getStudentId() {
@@ -41,6 +34,7 @@ public class Student implements Serializable {
 	}
 
 //	address
+//	Foreign key
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "address_id")
 	private Address address;
