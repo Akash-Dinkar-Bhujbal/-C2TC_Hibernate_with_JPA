@@ -33,3 +33,8 @@ AFTER RUN HIBERNATE PROJECT
 ![image](https://user-images.githubusercontent.com/44496666/159131278-8a7da495-ac76-4334-9243-91847b4fc12f.png)
 
 ![image](https://user-images.githubusercontent.com/44496666/159131290-868990ad-338e-47e9-a582-8637387b88f4.png)
+
+**LEARNING:**
+
+![image](https://user-images.githubusercontent.com/44496666/159131807-fa84bef6-5338-4da5-ba01-88f548de79fb.png)
+
